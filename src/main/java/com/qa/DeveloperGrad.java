@@ -1,7 +1,12 @@
 package com.qa;
 
 //DeveloperGrad is a kind of Graduate
-public class DeveloperGrad extends Graduate{
+public class DeveloperGrad extends Graduate implements Alarm{
+
+    @Override
+    public String turnAlarmOn() {
+        return "Dev Grad " + this.getFirstname() + " is " +  Alarm.super.turnAlarmOn();
+    }
 
     public DeveloperGrad(String firstname, int age, String educationalProjectName){
         super(firstname, age);

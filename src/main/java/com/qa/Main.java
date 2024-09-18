@@ -48,8 +48,14 @@ public class Main {
 //        useGraduate();
 //        typesPractice();
         oop();
+        interfacePractice();
     }
-
+    public static void interfacePractice() {
+        Alarm[] alarmables = {new DeveloperGrad("Marat"), new DeveloperGrad("Nicu"), new Vehicle()};
+        for (Alarm a : alarmables){
+            System.out.println(a.turnAlarmOn());
+        }
+    }
     public static void typesPractice() {
         int i, j;
         i = 5;
